@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.5" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
@@ -122,7 +122,7 @@
 <wire x1="3" y1="-2" x2="-2.5" y2="-2" width="0.05" layer="39"/>
 <wire x1="-2.5" y1="-2" x2="-2.5" y2="2.5" width="0.05" layer="39"/>
 </package>
-<package name="IMU_LSM_6DSO">
+<package name="IMU_LSM6DSO">
 <wire x1="-1.25" y1="1.5" x2="1.25" y2="1.5" width="0.127" layer="21"/>
 <wire x1="1.25" y1="1.5" x2="1.25" y2="-1.5" width="0.127" layer="21"/>
 <wire x1="1.25" y1="-1.5" x2="-1.25" y2="-1.5" width="0.127" layer="21"/>
@@ -192,9 +192,8 @@
 <wire x1="3.28460625" y1="0.635" x2="3.28460625" y2="-0.635" width="0.1524" layer="94"/>
 <wire x1="3.28460625" y1="-0.635" x2="2.54" y2="0" width="0.1524" layer="94"/>
 <text x="-5.08" y="2.54" size="2.286" layer="95" font="vector">&gt;Name</text>
-<text x="-5.08" y="-5.08" size="2.286" layer="96" font="vector">&gt;Value</text>
 </symbol>
-<symbol name="IMU">
+<symbol name="IMU_LSM">
 <wire x1="-7.62" y1="8.89" x2="7.62" y2="8.89" width="0.1524" layer="94"/>
 <wire x1="7.62" y1="8.89" x2="7.62" y2="-8.89" width="0.1524" layer="94"/>
 <wire x1="7.62" y1="-8.89" x2="-7.62" y2="-8.89" width="0.1524" layer="94"/>
@@ -214,7 +213,6 @@
 <pin name="SCL" x="0" y="11.43" visible="pad" length="short" rot="R270"/>
 <pin name="CS" x="2.54" y="11.43" visible="pad" length="short" rot="R270"/>
 <text x="-7.62" y="12.7" size="2.286" layer="95" font="vector">&gt;Name</text>
-<text x="-7.62" y="-15.24" size="2.286" layer="96" font="vector">&gt;Value</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -279,12 +277,12 @@
 </device>
 </devices>
 </deviceset>
-<deviceset name="IMU" prefix="U" uservalue="yes">
+<deviceset name="IMU_LSM" prefix="U" uservalue="yes">
 <gates>
-<gate name="G$1" symbol="IMU" x="0" y="0"/>
+<gate name="G$1" symbol="IMU_LSM" x="0" y="0"/>
 </gates>
 <devices>
-<device name="-IMU-LGA-14L" package="IMU_LSM_6DSO">
+<device name="-IMU-LGA-14L" package="IMU_LSM6DSO">
 <connects>
 <connect gate="G$1" pin="CS" pad="12"/>
 <connect gate="G$1" pin="GND1" pad="6"/>
